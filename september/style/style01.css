@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --white: #FFF;
+  --primary: #2196F3;
+  --secundary: #1a82d8;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  background-color: var(--primary);
+}
+
+.card{
+  width: 300px;
+  height: 300px;
+  background-color: var(--white);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover{
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.card h2{
+  font-family: "Asimovian", sans-serif;
+  padding: 20px 0;
+  font-size: 32px;
+}
+
+.buy{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card button{
+  padding: 8px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.card button:hover{
+  background-color: var(--secundary);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.card span{
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--secundary);
+}
+
+.card img{
+  height: 128px;
+  width: 128px;
+  transition: transform 0.4s ease;
+}
+
+.card img:hover{
+  transform: scale(1.1) rotate(10deg);
+}
+
+@media (max-width: 500px){
+  .card{
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+}
