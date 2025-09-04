@@ -1,0 +1,105 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --fundoCard: #FFF;
+  --sombraHover: #E0E0E0;
+  --textoPrincipal: #333333;
+  --textoSecundario: #666666;
+  --botaoPrincipal: #FF6F61;
+  --botaoHover: #FF4C3B;
+  --fundo: #868585;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--fundo);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--fundoCard);
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.card-info{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.compra{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card-info h2{
+  color: var(--textoPrincipal);
+  font-size: 1.5rem;
+}
+
+.card-info p{
+  color: var(--textoSecundario);
+  font-size: 1.02rem;
+}
+
+.compra p{
+  color: var(--textoPrincipal);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.compra button{
+  padding: 5px 20px;
+  font-weight: bold;
+  color: var(--fundoCard);
+  background-color: var(--botaoPrincipal);
+  border: none;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.compra button:hover{
+  background-color: var(--botaoHover);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@media (max-width: 520px){
+  .card{
+    width: 60%;
+  }
+}
