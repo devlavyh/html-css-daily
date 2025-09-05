@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --fundoBanner: #1E1E1E;
+  --titulo: #FFD700;
+  --descricao: #FFF;
+  --botao: #FF6F61;
+  --botaoHover: #FF4C3B;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  color: var(--descricao);
+}
+
+.banner{
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://criativo.design/wp-content/uploads/2025/03/Blank-T-shirt-Mockup-PSD-1024x870-1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--descricao);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+  min-height: 320px;
+  background-color: var(--fundoBanner);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.banner:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.banner h1{
+  color: var(--titulo);
+  font-size: 32px;
+}
+
+.banner-overlay{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.banner-overlay p{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner-overlay button{
+  padding: 10px 24px;
+  width: 60%;
+  border-radius: 12px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: var(--botao);
+  color: var(--descricao);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.banner-overlay button:hover{
+  background-color: var(--botaoHover);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transform: scale(1.02);
+}
+
+@media (max-width: 520px){
+  .banner{
+    width: 80%;
+  }
+
+  .banner-overlay h1{
+    font-size: 24px;
+  }
+}
