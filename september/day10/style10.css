@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root{
+  --background: #F7FAFF;
+  --text: #FFF;
+  --buttonPrimary: #2563eb;
+  --buttonHover: #1d4ed8;
+  --loading: #93c5fd;
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background);
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-btn{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  cursor: pointer;
+  background-color: var(--buttonPrimary);
+  color: var(--text);
+  font-size: 24px;
+  width: 250px;
+  height: 60px;
+  border-radius: 12px;
+  border: none;
+  padding: 12px 24px;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover{
+  background-color: var(--buttonHover);
+
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.login-btn:active{
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transform: translateY(2px);
+}
+
+.loader{
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--loading);
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  margin-left: 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.login-btn.loading .loader {
+  display: inline-block;
+}
+/* 
+.login-btn.loading .text {
+  visibility: hidden;
+} */

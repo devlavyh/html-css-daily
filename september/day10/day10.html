@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>September - Day 10</title>
+
+  <link rel="stylesheet" href="style10.css">
+</head>
+<body>
+  
+  <div class="button-container">
+    <button class="login-btn">
+      <span class="loader"></span>
+      <span class="text">Entrar</span>
+    </button>
+  </div>
+
+  <script>
+    const button = document.querySelector('.login-btn');
+    const text = button.querySelector('.text');
+
+    button.addEventListener('click', () => {
+      button.classList.add('loading');
+      text.textContent = 'Carregando...';
+
+      setTimeout(() => {
+        button.classList.remove('loading');
+        text.textContent = 'Entrar';
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
